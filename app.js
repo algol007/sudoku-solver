@@ -2,19 +2,15 @@ var n ;
 var arr = new Array(n);
 var solve_btn;
 
-window.onload = ()=>{
+window.onload = () => {
 	var submit_btn = document.getElementById('submit_btn');
 	submit_btn.onclick = ()=>{
 		n = document.getElementById('grid_size').value;
-		// console.log(n);
 		CreateFrame(n);
 	}
-
 }
 
-
 function CreateFrame(n) {
-	// body...
 	for(let i=0 ;i<n ;i++){
 		var row = new Array(n);
 		for(let j=0 ;j<n ;j++){
@@ -62,7 +58,6 @@ function SolvePuzz(a){
 			}
 		}	
 	}
-	// console.log(blank_cells);
 }
 
 function FindAllBlankCells(a){
@@ -100,6 +95,7 @@ function validRow(c,val){
 	}
 	return true;
 }
+
 function validColumn(c,val){
 	var row = c[0];
 	var col = c[1];
@@ -110,6 +106,7 @@ function validColumn(c,val){
 	}
 	return true;
 }
+
 function validGrid(c,val){
 	var row = c[0];
 	var col = c[1];
